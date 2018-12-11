@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FCC Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+</head>
+<body>
+<h1 id="title">ABoxinTime Survey Form</h1>
+    <div id="form-outer">   
+        <p id="description">Let us know your thoughts and ideas on how to improve ABoxinTime!</p>
+    <form id="survey-form" method="GET" action="#">
+        <div class="left-label">
+            <label id="name-label" for="name">Name:</label>
+        </div>
+        <div class="right-label">
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="left-label">
+            <label id="email-label" for="email">Email:</label>
+                <div class="right-label">
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </div>
+        </div>
+        <div class="left-label">
+            <label id="number-label" for="purchase">How much did you spend at ABoxinTime?</label>
+        </div>
+        <div class="right-label">
+            <input id="number" type="number" min="0.00" max="500.00" step="any" placeholder="Purchase total in £">
+        </div>
+        <div class="left-label">
+            <label for="placeofpurchase">What platform was used in your ABoxinTime purchase?</label>
+        </div>
+        <div class="right-label">
+            <ul id="purchase-list" style="list-style: none">
+                <li class="radio"><label><input type="radio" name="placeofpurchase" value="1">The ABoxinTime website</label></li>
+                <li class="radio"><label><input type="radio" name="placeofpurchase"value="2">Etsy</label></li>
+                <li class="radio"><label><input type="radio" name="placeofpurchase" value="3">Facebook</label></li>
+                <li class="radio"><label><input type="radio" name="placeofpurchase" value="4">Instagram</label></li>
+            </ul>
+        </div>
+        <div class="left-label">
+            <label for="recommend">How likely is that you would recommend ABoxinTime?</label>
+        </div>
+        <div class="right-label">
+            <select name="recommend" id="dropdown">
+                <option disabled value> Select an option</option>
+                <option value="definitely"> Definitely</option>
+                <option value="maybe">Maybe</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <div class="left-label">
+            <label for="products">Products purchased at ABoxinTime?</label>
+        </div>  
+        <div class="right-label">
+            <ul id="products-list" style="list-style: none;">
+                <li class="checkbox"><label><input type="checkbox" name="products"value="Arabic box frame">Arabic box frame</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="products"value="Mug">Mug</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="products"value="Islamic card">Islamic card</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="products" value="Digital frame">Digital frame</label></li>
+            </ul>
+        </div>
+        <div class="left-label">
+             <label for="comments"> Any comments/feedback?</label>
+        </div>
+        <div class="right-label">
+            <textarea id="comments-area" class="input-field" style="height:50px;resize:vertical" name="comments" placeholder="Enter your comments here ... "></textarea>
+        </div>
+        <div>
+            <button type= "submit" id = "submit" onsubmit="myFunction()"> <b>Submit</b></button>
+        </div>
+    </div>
+    </form>
+
+</body>
+</html>
